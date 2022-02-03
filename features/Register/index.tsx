@@ -25,7 +25,7 @@ export default function RegisterComponent() {
 
   return (
     <>
-      <div className="max-w-sm bg-white m-auto min-h-screen shadow-lg">
+      <div className="w-full bg-white m-auto min-h-screen">
         {/* Header */}
         <Header step={step} />
         {/* Sections */}

@@ -22,3 +22,71 @@ input.otp{
   height: 40px !important;
   margin: 0 5px;
 }
+/* Device styles below */
+.device {
+  margin: 1rem auto;
+}
+.device-iphone-x {
+  height: 868px;
+  width: 428px;
+}
+.device {
+  position: relative;
+  transform: scale(1);
+  z-index: 1;
+}
+.device, .device::before, .device::after, .device *::before, .device *::after {
+  box-sizing: border-box;
+  display: block;
+}
+.device-iphone-x .device-frame {
+  background: #222;
+  border-radius: 68px;
+  box-shadow: inset 0 0 2px 2px #c8cacb, inset 0 0 0 7px #e2e3e4;
+  height: 868px;
+  padding: 28px;
+  width: 428px;
+}
+.device .device-frame {
+  z-index: 1;
+}
+.device-iphone-x .device-content {
+  border-radius: 40px;
+  height: 812px;
+  width: 375px;
+}
+
+.device .device-content {
+  background-color: #fff;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+}
+.device-iphone-x .device-header {
+  background: #222;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 30px;
+  left: 50%;
+  margin-left: -102px;
+  position: absolute;
+  top: 28px;
+  width: 204px;
+}
+.device-iphone-x .device-btns {
+  background: #c8cacb;
+  height: 32px;
+  left: -3px;
+  position: absolute;
+  top: 115px;
+  width: 3px;
+}
+.device-iphone-x .device-power {
+  background: #c8cacb;
+  height: 100px;
+  position: absolute;
+  right: -3px;
+  top: 200px;
+  width: 3px;
+}

@@ -22,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 Mock data to use:
-Every input should be 4 or more charaters long
+Every input should be 4 or more characters long
 
 - Email :        `test@test.com`
 - Phone number : `321456789`

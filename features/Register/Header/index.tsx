@@ -2,7 +2,7 @@
 import Image from 'next/image';
 const Header = ({step}) => {
     return (
-        <div className={`${step === 6 ? "bg-gradient-to-r from-blue-400 to-purple-500 py-8" : "bg-gray-100 py-4"} flex justify-center w-full mb-6`}>
+        <div className={`${step === 6 ? "bg-gradient-to-r from-blue-400 to-purple-500 py-8" : "bg-gray-100 py-4"} flex justify-center w-full mb-6 pt-12`}>
             {step === 1 && <Image width={100} height={20} src="/images/home.png" alt="home" />}
             {step === 2 && <p className="font-semibold text-black">Verification</p>}
             {step === 3 && <p className="font-semibold text-black">Create NEAR account</p>}

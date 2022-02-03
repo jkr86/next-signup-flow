@@ -9,9 +9,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Layout>
-        <main className='px-6 bg-white '>
           <Register />
-        </main>
       </Layout>
     </>
   );
