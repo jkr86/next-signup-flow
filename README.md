@@ -25,7 +25,7 @@ Mock data to use:
 Every input should be 4 or more characters long
 
 - Email :        `test@test.com`
-- Phone number : `321456789`
+- Phone number : `3214567890`
 - OTP :          `123456`
 - Full Name :    `Test User`
 - Near ID :      `testuser`
