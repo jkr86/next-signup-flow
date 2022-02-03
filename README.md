@@ -24,7 +24,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 Mock data to use:
 Every input should be 4 or more characters long
 
-- Email :        `test@test.com`
+- Email :   `test@test.com`
 - Phone number : `3214567890`
 - OTP :          `123456`
 - Full Name :    `Test User`
