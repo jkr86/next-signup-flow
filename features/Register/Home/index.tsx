@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import ReactPhoneInput from "react-phone-input-2";
 
 const Home = ({ changeStep, view, setView }) => {
   const dispatch = useDispatch();
@@ -23,7 +24,11 @@ const Home = ({ changeStep, view, setView }) => {
     }
   };
 
-  return(
+  const handlePhoneChange = value => {
+    setInputValue(value)
+  };
+
+  return (
     <div>
       <div className="flex justify-center">
         <button
@@ -50,7 +55,14 @@ const Home = ({ changeStep, view, setView }) => {
           Register();
         }}>
         <div className="relative mb-5">
-          <input type={view === "phone" ? "text" : view} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder={`Enter your ${view}`} className="py-3 px-5 w-full h-full rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none" />
+          {view === "email" ? <input type={"email"} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder={`Enter your email`} className="py-3 px-5 w-full h-full rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none" />
+            : <ReactPhoneInput
+              country={"us"}
+              value={inputValue}
+              onChange={handlePhoneChange}
+              placeholder="Enter your phone"
+              inputClass="py-3 px-5 w-full h-full rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none"
+            />}
         </div>
         <div className="flex justify-center w-full">
           <button disabled={(view === "email" && !validateEmail(inputValue)) || (view === "phone" && inputValue.length < 4)} className={`font-semibold py-2.5 px-5 rounded-lg text-white flex items-center ${(view === "email" && validateEmail(inputValue)) || (view === "phone" && inputValue.length > 4) ? "bg-purple-500" : "bg-gray-300"} `} type="submit">

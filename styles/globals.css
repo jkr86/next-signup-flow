@@ -22,6 +22,12 @@ input.otp{
   height: 40px !important;
   margin: 0 5px;
 }
+
+/* Hide phone input label */
+.special-label{
+  display: none;
+}
+
 /* Device styles below */
 .device {
   margin: 1rem auto;
