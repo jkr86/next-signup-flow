@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
-const Profile = ({changeStep}) => {
+const Profile = ({ changeStep }) => {
   const selectUser = (state) => state.user;
   const { name, id, phone, email, password, phrase } = useSelector(selectUser);
 
@@ -11,7 +11,7 @@ const Profile = ({changeStep}) => {
   }
   return (
     <>
-      <p className="text-center text-black font-semibold mb-6">Welcome to the wallet. Here are your details</p>
+      <p className="text-black font-semibold mb-6 pr-6">Welcome to the wallet. Here are the details you provided</p>
       <div className="flex items-center mb-2">
         <p className="text-black font-semibold text-sm w-28">Name: </p>
         <p className="text-sm w-28 mt-0 ml-4">{name}</p>
@@ -20,14 +20,14 @@ const Profile = ({changeStep}) => {
         <p className="text-black font-semibold text-sm w-28">Client ID: </p>
         <p className="text-sm w-28 mt-0 ml-4">{id}</p>
       </div>
-      <div className="flex items-center mb-2">
+      {phone ? <div className="flex items-center mb-2">
         <p className="text-black font-semibold text-sm w-28">Phone: </p>
         <p className="text-sm w-28 mt-0 ml-4">{phone}</p>
       </div>
-      <div className="flex items-center mb-2">
-        <p className="text-black font-semibold text-sm w-28">Email:</p>
-        <p className="text-sm w-28 mt-0 ml-4">{email}</p>
-      </div>
+        : <div className="flex items-center mb-2">
+          <p className="text-black font-semibold text-sm w-28">Email:</p>
+          <p className="text-sm w-28 mt-0 ml-4">{email}</p>
+        </div>}
       <div className="flex items-center mb-2">
         <p className="text-black font-semibold text-sm w-28">Password:</p>
         <p className="text-sm w-28 mt-0 ml-4">{password}</p>
@@ -36,7 +36,7 @@ const Profile = ({changeStep}) => {
         <p className="text-black font-semibold text-sm w-28">Saved phrase:</p>
         <p className="text-sm w-28 mt-0 ml-4">{phrase}</p>
       </div>
-      <button onClick={goBack} className={`mt-6 font-semibold py-2.5 px-5 rounded-lg flex items-center bg-gray-600 text-white m-auto`} type="button">
+      <button onClick={goBack} className={`mt-10 font-semibold py-2.5 px-5 rounded-lg flex items-center bg-gray-600 text-white`} type="button">
         <span className="mr-3">Start over</span>
         <svg width={8} height={14} viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

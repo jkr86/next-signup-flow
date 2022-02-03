@@ -13,6 +13,7 @@ const Header = ({step}) => {
                     <p className="mt-2.5 text-white text-sm font-medium">a web3 gateway to hidden experiences</p>
                 </div>
             )}
+            {step === 7 && <p className="font-semibold text-black">Profile</p>}
         </div>
     )
 }
