@@ -24,12 +24,14 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 Mock data to use:
 Every input should be 4 or more charaters long
 
+```bash
 Email : `test@test.com`
 Phone number : `321456789`
 OTP : `123456`
 Full Name : `Test User`
 Near ID : `testuser`
 Password : `test1234`
+```
 
 If everything goes well you will be presented with all your details.
 
