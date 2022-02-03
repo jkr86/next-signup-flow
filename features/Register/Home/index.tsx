@@ -15,11 +15,11 @@ const Home = ({ changeStep, view, setView }) => {
   const Register = () => {
     if (view === "email") {
       if (validateEmail(inputValue) === null) return null;
-      dispatch({ type: "ADD_EMAIL", payload: inputValue });
+      dispatch({ type: "ADD_USER_EMAIL", payload: inputValue });
       changeStep(2);
     } else {
       if (inputValue.length < 4) return;
-      dispatch({ type: "ADD_PHONE", payload: inputValue });
+      dispatch({ type: "ADD_USER_PHONE", payload: inputValue });
       changeStep(2);
     }
   };

@@ -6,6 +6,7 @@ const Login = ({ changeStep }) => {
   const user = useSelector(selectUser);
   const [password, setPassword] = useState("");
   const [isWrongPassword, setIsWrongPassword] = useState(false);
+  
   const unlock = () => {
     if (user.password !== password) {
       setIsWrongPassword(true);

@@ -46,7 +46,7 @@ const Secure = ({ changeStep }) => {
           className={`mt-2.5 py-3 px-5 w-full rounded-lg border ${arePasswordsUnmatched ? "border-red-500" : "border-gray-300"} focus:border-purple-600 focus:outline-none`}
         />
       </div>
-      <button disabled={password.length < 4 || rePassword.length < 4} className={`font-semibold py-2.5 px-5 rounded-lg text-white flex items-center ${password.length < 4 || rePassword.length < 4 ? "bg-gray-300" : "bg-purple-500"} m-auto`} type="submit">
+      <button disabled={password.length < 4 || rePassword.length < 4 || password !== rePassword} className={`font-semibold py-2.5 px-5 rounded-lg text-white flex items-center ${password.length < 4 || rePassword.length < 4 || password !== rePassword ? "bg-gray-300" : "bg-purple-500"} m-auto`} type="submit">
         <span className="mr-3">Continue</span>
         <svg width={8} height={14} viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
