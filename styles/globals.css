@@ -29,9 +29,6 @@ input.otp{
 }
 
 /* Device styles below */
-.device {
-  margin: 1rem auto;
-}
 .device-iphone-x {
   height: 868px;
   width: 428px;

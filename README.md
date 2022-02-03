@@ -31,6 +31,6 @@ Every input should be 4 or more characters long
 - Near ID :      `testuser`
 - Password :     `test1234`
 
-If everything goes well you will be presented with all your details.
+If everything goes well you will be presented with all your details at profile page.
 
 You can refresh the page at any instance it will resume on the same step.
